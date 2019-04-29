@@ -25,7 +25,7 @@ SECRET_KEY = 'rc(ku!nxu($am!k$(aq2d*+2^tvxmd_i_%!o^w(h-5ocyl84#h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['steve81662.pythonanywhere.com']
 
 
 # Application definition
