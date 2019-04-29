@@ -1,0 +1,16 @@
+{% extends "django1_app/base.html" %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Please Login</h1>
+    <form action="{% url 'django1_app:user_login' %}" method="POST">
+        {%  csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" placeholder="User Name">
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+{% endblock %}

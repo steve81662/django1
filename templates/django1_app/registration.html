@@ -1,0 +1,21 @@
+{% extends "django1_app/base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Django App Home Page</h1>
+{% if registered  %}
+    <h1>Thank you for Registering!</h1>
+{% else %}
+    <h1>Register Here!</h1>
+    <h3>Complete the form below:</h3>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        <input type="submit" name="" value="Register">
+    </form>
+{% endif %}
+</div>
+
+{% endblock %}
